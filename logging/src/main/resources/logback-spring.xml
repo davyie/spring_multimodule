@@ -10,14 +10,14 @@
         </encoder>
     </appender>
 
-<!--     File appender: logs output to a file -->
-<!--    <appender name="file" class="ch.qos.logback.core.FileAppender">-->
-<!--        <file>logs/app.log</file>-->
-<!--        <append>true</append>-->
-<!--        <encoder>-->
-<!--            <pattern>${LOG_PATTERN}</pattern>-->
-<!--        </encoder>-->
-<!--    </appender>-->
+<!--     File appender: logs output to a file-->
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>logs/app.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
 
     <!-- Set log level for all packages to INFO and use the console appender -->
     <root level="info">
