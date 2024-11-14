@@ -21,6 +21,11 @@ public class LoggingAspect {
         logger.info("Entering method: {} with arguments {}", joinPoint.getSignature(), joinPoint.getArgs());
     }
 
+    @Before("execution(* com.example.HelloWorldController.GoHome(..))")
+    public void logBeforeHome(JoinPoint joinPoint) {
+        logger.info("Logs before entering {} ", joinPoint.getSignature());
+    }
+
     // Log after a method has successfully executed
     @After("execution(* com.ims.crochet_v2.Application.*.*(..))")
     public void logAfterController(JoinPoint joinPoint) {
