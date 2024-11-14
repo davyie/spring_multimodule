@@ -13,7 +13,7 @@
     <artifactId>controller</artifactId>
     <name>controller</name>
     <description>This submodule handles all incoming requests</description>
-    <packaging>jar</packaging>
+<!--    <packaging>jar</packaging>-->
 
     <dependencies>
         <dependency>

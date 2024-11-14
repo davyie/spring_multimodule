@@ -13,12 +13,6 @@
     <artifactId>logging</artifactId>
     <name>logging</name>
     <description>This submodule handles all the logging</description>
-    <packaging>jar</packaging>
+<!--    <packaging>jar</packaging>-->
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-    </dependencies>
 </project>
