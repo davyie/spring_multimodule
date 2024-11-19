@@ -21,6 +21,7 @@
 		<module>logging</module>
 		<module>controller</module>
 		<module>catalogue</module>
+		<module>rateLimiting</module>
 	</modules>
 	<url/>
 	<licenses>
@@ -66,10 +67,5 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongodb-driver-sync</artifactId>
-			<version>5.2.0</version>
-		</dependency>
 	</dependencies>
 </project>

@@ -24,6 +24,11 @@
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
+            <artifactId>rateLimiting</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
             <artifactId>controller</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
