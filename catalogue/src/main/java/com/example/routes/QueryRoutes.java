@@ -1,7 +1,7 @@
 package com.example.routes;
 
 import com.example.DTO.ProductDTO;
-import com.example.annotations.RateLimited;
+import com.example.RateLimited;
 import com.example.queries.GetAllProductQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

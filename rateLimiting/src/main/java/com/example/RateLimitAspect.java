@@ -1,8 +1,5 @@
-package com.example.aspect;
+package com.example;
 
-import com.example.components.RateLimiter;
-import com.example.config.RateLimitConfig;
-import com.example.exception.RateLimitExceededException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -13,12 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class RateLimitAspect {
 
-    private RateLimitConfig rateLimitConfig;
+    private RateLimitConfig rateLimitConfig = new RateLimitConfig(5, 60);
 
     private RateLimiter rateLimiter;
 
     @Autowired
-    public RateLimitAspect(RateLimitConfig rateLimitConfig, RateLimiter rateLimiter) {
+    public RateLimitAspect(RateLimiter rateLimiter) {
         this.rateLimitConfig = rateLimitConfig;
         this.rateLimiter = rateLimiter;
     }

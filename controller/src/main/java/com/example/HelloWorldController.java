@@ -13,6 +13,7 @@ public class HelloWorldController {
         return "Hello World!";
     }
 
+    @RateLimited
     @GetMapping("/home")
     public String GoHome() {
         return "This is home";
