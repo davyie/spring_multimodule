@@ -6,6 +6,5 @@ Research
 - class loaders
 - ApplicationContext
 - @ConfigurationProperties
-- 
 Study how configuration works in spring.
 

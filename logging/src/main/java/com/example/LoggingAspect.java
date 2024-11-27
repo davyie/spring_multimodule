@@ -56,11 +56,6 @@ public class LoggingAspect {
         logger.info("Exiting database");
     }
 
-    @Before("execution(* com.example.aspect.*.*(..))")
-    public void logBeforeRateLimit(JoinPoint joinPoint) {
-        logger.info("Rate limit logging...{}", joinPoint.getArgs());
-    }
-
     // Log after a method has successfully executed
     @After("execution(* com.ims.crochet_v2.Application.*.*(..))")
     public void logAfterController(JoinPoint joinPoint) {
