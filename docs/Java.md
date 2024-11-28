@@ -1,5 +1,10 @@
 # Java
 
+## JVM
+What is classpath? 
+- This is a parameter in JVM or compiler that specifies the location of user-defined classes and packages.
+It is either set on command line or through environment variable.
+
 ## Access modifiers 
 What is the difference between protected and private? 
 - `private` modifier allow code declared in the same class to access. `protected` code in the same class or the derived classes can access this variable. 
@@ -47,4 +52,8 @@ What is deserialize?
 - This is the process of translating a format into objects. 
 
 What problem does this solve? 
-- It solves the problem of storing our data structures and objects long term in a format suitable for storing. 
+- It solves the problem of storing our data structures and objects long term in a format suitable for storing.
+
+## Database 
+What is a DataSource? 
+- This is a connection set up to a database. 
