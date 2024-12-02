@@ -22,7 +22,8 @@
 		<module>controller</module>
 		<module>catalogue</module>
 		<module>rateLimiting</module>
-		<module>warehouse</module>
+        <module>filters</module>
+        <module>warehouse</module>
 	</modules>
 	<url/>
 	<licenses>

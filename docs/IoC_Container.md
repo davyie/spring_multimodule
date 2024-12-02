@@ -19,4 +19,7 @@ What does Container need?
 What are Beans? 
 - These are the business objects the container initialises and handles. 
 
-
+What is the purpose of the Configuration file? 
+- The purpose of configuration is to deploy beans and other related resources for the Spring application context. Configuration allows 
+adjusting behaviour using properties files or environment variables. 
+Modularize Application Configuration for different parts of the application. 
