@@ -11,15 +11,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
     private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
+    private LoggingConfig loggingConfig;
 
+    public LoggingAspect(LoggingConfig loggingConfig) {
+        this.loggingConfig = loggingConfig;
+    }
     /**
      * This function is used to log Hello World.
+     * path = "execution(* com.example.*.*(..))"
      * @param joinPoint
      */
-    @Before("execution(* com.example.*.*(..))")
-    public void logBeforeHelloWorld(JoinPoint joinPoint) {
-        logger.info("Entering method: {} with arguments {}", joinPoint.getSignature(), joinPoint.getArgs());
-    }
+//    @Before("execution(* com.example.*.*(..))")
+//    public void logBeforeHelloWorld(JoinPoint joinPoint) {
+//        logger.info("Entering method: {} with arguments {}", joinPoint.getSignature(), joinPoint.getArgs());
+//    }
 
     @Before("execution(* com.example.routes.Routes.*(..))")
     public void logBeforeHome(JoinPoint joinPoint) {
@@ -48,22 +53,16 @@ public class LoggingAspect {
 
     @Before("execution(* com.example.repository.ProductRepository.*(..))")
     public void logBeforeMongoDBRepository(JoinPoint joinPoint) {
-        logger.info("Accessing database to store the data");
+        logger.info("Entering method: {}. Accessing database to store the data", joinPoint.getSignature());
     }
 
     @After("execution(* com.example.repository.ProductRepository.*(..))")
     public void logAfterMongoDBRepository(JoinPoint joinPoint) {
-        logger.info("Exiting database");
-    }
-
-    // Log after a method has successfully executed
-    @After("execution(* com.ims.crochet_v2.Application.*.*(..))")
-    public void logAfterController(JoinPoint joinPoint) {
-        logger.info("Exiting method: {}", joinPoint.getSignature());
+        logger.info("Exiting method: {}. Exiting database", joinPoint.getSignature());
     }
 
     // Log around method execution (before and after, and potentially log execution time)
-    @Around("execution(* com.ims.crochet_v2.Application.*.*(..))")
+    @Around(value = "execution(* com.example.*.*(..))")
     public Object logAroundController(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         Object result;
@@ -82,7 +81,7 @@ public class LoggingAspect {
     }
 
     // Log exceptions thrown by any method
-    @AfterThrowing(pointcut = "execution(* com.ims.crochet_v2.*.*.*(..))", throwing = "exception")
+    @AfterThrowing(pointcut = "execution(* com.example.*.*(..))", throwing = "exception")
     public void logExceptions(JoinPoint joinPoint, Throwable exception) {
         logger.error("Exception in method: {} with cause: {}", joinPoint.getSignature(), exception.getMessage());
     }

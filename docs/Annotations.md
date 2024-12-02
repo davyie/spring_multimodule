@@ -9,6 +9,9 @@ Which three annotations are added in @SpringBootApplication?
 What does @ComponentScan? 
 - This annotation scans components within the common parent package. This is usually used in combination with @Configuration. 
 
+How does @ComponentScane scan beans? 
+- We have to specify it in the configuration where to scan the beans. This includes in multi module maven project aswell. 
+
 What is a Filter in terms of @ComponentScan? 
 - We can configure the Scan by using filter, i.e., tell Spring which beans to include and exclude.
 
@@ -66,3 +69,6 @@ So it is a way to inject code.
 What are good pieces of code to have as Aspect? 
 - That span across the application, .e.g, Logging, Monitoring, RateLimit and ConcurrentRetires. 
 
+What is @ConfigurationProperties? 
+- This is a way to inject values into a @Configuration-class.
+- This allows us to perform validation aswell. 

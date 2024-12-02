@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class RateLimitAspect {
 
-    private RateLimitConfig rateLimitConfig = new RateLimitConfig(5, 60);
+    private RateLimitConfig rateLimitConfig;
 
     private RateLimiter rateLimiter;
 
     @Autowired
-    public RateLimitAspect(RateLimiter rateLimiter) {
+    public RateLimitAspect(RateLimiter rateLimiter, RateLimitConfig rateLimitConfig) {
         this.rateLimitConfig = rateLimitConfig;
         this.rateLimiter = rateLimiter;
     }
@@ -23,7 +23,7 @@ public class RateLimitAspect {
     @Around("@annotation(RateLimited)")
     public Object enforceRateLimit(ProceedingJoinPoint joinPoint) throws Throwable {
         String key = getKey(joinPoint);
-        System.out.println(key);
+//        System.out.println(key);
         if (!rateLimiter.tryAcquire(key,
                 rateLimitConfig.getRequests(),
                 rateLimitConfig.getSeconds())) {

@@ -17,13 +17,13 @@ What are the critera for `WRITE` or `COMMANDS`?
 
 - [x] Two query 
 - [x] Two commands 
-- [] Aspect oriented programming 
-- [] DDD With Spring 
-- [] Logging 
-- [] Configuration 
+- [x] Aspect oriented programming 
+- [x] DDD With Spring 
+- [x] Logging 
+- [] External Configuration 
 - [x] Packages
-- [] CQRS
-- [] Rate limit - using external configuration 
+- [x] CQRS
+- [x] Rate limit - using external configuration 
 
 Later: 
 Long term storage

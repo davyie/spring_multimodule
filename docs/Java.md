@@ -56,4 +56,9 @@ What problem does this solve?
 
 ## Database 
 What is a DataSource? 
-- This is a connection set up to a database. 
+- This is a connection set up to a database.
+
+
+## Classloaders
+What are ClassLoaders? 
+- These are responsible for loading in classes in JVM (Java Virtual Machine) during runtime.
