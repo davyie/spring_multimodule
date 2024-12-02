@@ -24,6 +24,8 @@ What are the critera for `WRITE` or `COMMANDS`?
 - [x] Packages
 - [] CQRS
 - [] Rate limit - using external configuration 
+- [] Filtering 
+
 
 Later: 
 Long term storage
