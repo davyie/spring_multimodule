@@ -22,9 +22,9 @@ What are the critera for `WRITE` or `COMMANDS`?
 - [x] Logging
 - [] External Configuration
 - [x] Packages
-- [] CQRS
-- [] Rate limit - using external configuration
-- [] Filtering
+- [x] CQRS
+- [x] Rate limit - using external configuration
+- [x] Filtering
 
 Later: 
 Long term storage
