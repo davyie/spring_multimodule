@@ -24,6 +24,7 @@
 		<module>rateLimiting</module>
         <module>filters</module>
         <module>warehouse</module>
+		<module>order</module>
 	</modules>
 	<url/>
 	<licenses>
@@ -39,7 +40,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
