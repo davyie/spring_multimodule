@@ -15,3 +15,37 @@ How does docker work under the hood?
 How can we create docker image with Maven? 
 - Spring boot has it built-in. 
 Additionally we can also specify the image name by adding <build> tag in the parent pom file. We just need to create a Dockerfile in the root directory, ie, the top folder of the project. 
+
+How is a dockerfile built? 
+- The keywords: 
+FROM 
+WORKDIR
+COPY 
+RUN 
+EXPOSE 
+USER 
+CMD 
+
+What does FROM do? 
+- This command creates a base image which we are building our image from. 
+
+What does WORKDIR do? 
+- This specifies the working directory where files will be copied to and run from. 
+
+What is COPY? 
+- It is self-explanatory. It means that we copy file from host machine to image. 
+
+What is RUN? 
+- this tells the image to run a specific script or commands. This could be mvn clean install or npm commands. 
+
+What is EXPOSE? 
+- This exposes the port from container to outside. 
+
+What is ENV? 
+- This command tells docker to set environment variables. 
+
+What is USER? 
+- This instruction sets the default user for all subsequent instructions. 
+
+What is CMD?
+- This is the instruction which runs once containers are create from the image. 

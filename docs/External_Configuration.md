@@ -16,3 +16,17 @@ What are best practices?
 - Use .env to store sensitive information. Use spring-profiles for different environments. 
 Keep .env from version control by including it in .gitignore. 
 
+How does spring load in application.properties? 
+- It loads in the values from the highest level. So if a child uses application.properties value and it is declared in parent's then the child can use it. 
+Oke... The values are loaded only for the JAR modules. So, once the JAR is running it loads in the `application.properties`. 
+
+How do we include *.properties files from Main? 
+- We can use `@PropertySource` to include it. 
+Just add this `@PropertySource("classpath:custom-config.properties")` in `@SpringApplication` file. 
+
+What does `@PropertySource` do? 
+- This provides properties file into spring environment. We usually use it together with `@Configuration`. 
+
+What does `@Configuration` do? 
+- This is a class which configures the Spring application context. It can set up variables, initialize beans into the spring application context and more. 
+
