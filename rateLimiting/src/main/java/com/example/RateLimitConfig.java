@@ -17,8 +17,8 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("rate")
 public class RateLimitConfig {
 
-    private int requests = 5;
+    private int requests;
 
-    private int seconds = 60;
+    private int seconds;
 
 }
