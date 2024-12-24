@@ -14,10 +14,11 @@ import org.springframework.context.annotation.Configuration;
 @NoArgsConstructor
 @AllArgsConstructor
 @Configuration
-@ConfigurationProperties(prefix = "rate")
+@ConfigurationProperties("rate")
 public class RateLimitConfig {
 
-    private int requests;
+    private int requests = 5;
 
-    private int seconds;
+    private int seconds = 60;
+
 }
