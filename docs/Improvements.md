@@ -20,7 +20,7 @@ What are the critera for `WRITE` or `COMMANDS`?
 - [x] Aspect oriented programming
 - [x] DDD With Spring
 - [x] Logging
-- [] External Configuration
+- [x] External Configuration
 - [x] Packages
 - [x] CQRS
 - [x] Rate limit - using external configuration

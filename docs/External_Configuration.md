@@ -1,5 +1,8 @@
 # External Configuration 
 
+Good discussion about external configuration: https://stackoverflow.com/questions/23138494/spring-boot-application-properties-maven-multi-module-projects 
+
+
 What is the purpose of application.properties? 
 - It is a main configuration file for Spring Boot Application. It is used to defined application settings such as database connections, server ports or feature toggles. 
 
@@ -29,4 +32,8 @@ What does `@PropertySource` do?
 
 What does `@Configuration` do? 
 - This is a class which configures the Spring application context. It can set up variables, initialize beans into the spring application context and more. 
+
+How do we load in the .env? 
+- we can do it multiple ways. We can either `source` it in the terminal and run it in the container. We can also to it programmatically through Main application and dotenv dependency. 
+We should probably do this in the configuration file of the main application. 
 
