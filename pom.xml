@@ -25,6 +25,7 @@
         <module>filters</module>
         <module>warehouse</module>
 		<module>order</module>
+		<module>common-cqrs</module>
 	</modules>
 	<url/>
 	<licenses>
@@ -40,7 +41,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
