@@ -26,6 +26,7 @@
         <module>warehouse</module>
 		<module>order</module>
 		<module>common-cqrs</module>
+		<module>rabbitmq</module>
 	</modules>
 	<url/>
 	<licenses>
@@ -74,6 +75,13 @@
 			<groupId>io.github.cdimascio</groupId>
 			<artifactId>dotenv-java</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-amqp -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+			<version>3.4.5</version>
 		</dependency>
 	</dependencies>
 	<build>
