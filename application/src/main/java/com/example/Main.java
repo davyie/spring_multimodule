@@ -9,15 +9,10 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication
 @EnableMongoRepositories(basePackages = "com.example")
-@EnableConfigurationProperties(RateLimitConfig.class)
-//@EnableJpaRepositories
+//@EnableConfigurationProperties(RateLimitConfig.class)
+////@EnableJpaRepositories
 public class Main {
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.configure().load();
-
-        // Set environment variables to system properties
-        dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
-
         SpringApplication application =  new SpringApplication(Main.class);
         application.run(args);
     }
