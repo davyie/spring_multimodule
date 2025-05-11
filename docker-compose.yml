@@ -1,11 +1,14 @@
-version: '3.8'
 services:
-  mongo:
-    image: mongo
-    restart: always
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongodb-data:/data/db
   mysql-db:
     image: mysql:8.0
     container_name: mysql-jpa-db
@@ -19,9 +22,12 @@ services:
     volumes:
       - db-data:/var/lib/mysql
   application:
-    image: application
-    restart: always
-    ports: 
-      - "8080:8080"
+     image: application:1.0.0
+     restart: always
+     ports:
+       - "8080:8080"
+     depends_on:
+      - mysql-db
 volumes:
   db-data:
+  mongodb-data:
